@@ -9,21 +9,6 @@ hbd = """
  █▄█ █ █ ▀█ █  █  █ █▄▀ █▀█  █  ▄
  """
 
-beverages_that_contains_alcohol = """
-      (     (           o
-  (                      _'
-   )        (           {\\_}
-  (          )          |=|
-  #         (    '      | |
-         o   #  o   o   |@|
-(        . o  _o_._'_  /___\\
- )      o_.__'\~~~~~/  |   |
-(      \~~~~~/ '-.-'   |   |
- )      '-.-'    |     |   |
-#         |     _|_    |   |
-         _|_           |___|
-"""
-
 def firework_animation():
     # Listen, just, listen okay. 
     # I have no idea what I'm doing. Is this a great approach to what I'm trying to do? No. Do I know a better approach? Also no
@@ -62,6 +47,31 @@ def firework_animation():
         print(firework)
         time.sleep(0.15)
             
+def drinks_animation():
+    drink0 = "      (     (           o\n"
+    drink1 = "  (                      _'\n"
+    drink2 = "   )        (           {\\_}\n"
+    drink3 = "  (          )          |=|\n"
+    drink4 = "  #         (    '      | |\n"
+    drink5 = "         o   #  o   o   |@|\n"
+    drink6 = "(        . o  _o_._'_  /___\\\n"
+    drink7 = " )      o_.__'\~~~~~/  |   |\n"
+    drink8 = "(      \~~~~~/ '-.-'   |   |\n"
+    drink9 = " )      '-.-'    |     |   |\n"   # I refuse to make it drink10 and have things shifted to the right by 1 character. NO
+    drinka = "#         |     _|_    |   |\n"
+    drinkb = "         _|_           |___|\n"
+    
+    drink_list = [drink0, drink1, drink2, drink3,
+    drink4, drink5, drink6, drink7,
+    drink8, drink9, drinka, drinkb]
+
+    drink = ""
+
+    for i in range(len(drink_list)):
+        drink += drink_list[i]
+    print(drink)
+
+    pass
 
 print(hbd)
 time.sleep(1.5)
