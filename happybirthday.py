@@ -50,7 +50,7 @@ def firework_animation():
 def drinks_animation():
     drink0 = "      (     (           o\n"
     drink1 = "  (                      _'\n"
-    drink2 = "   )        (           {\\_}\n"
+    drink2 = "   )        (           {_}\n"
     drink3 = "  (          )          |=|\n"
     drink4 = "  #         (    '      | |\n"
     drink5 = "         o   #  o   o   |@|\n"
@@ -71,9 +71,20 @@ def drinks_animation():
         drink += drink_list[i]
     print(drink)
 
+    # How about another 30 frames animation eh? Because I totally know what I'm doing this time 8)
+    for i in range(30):
+        drink = ""
+        for j in range(len(drink_list)):
+            if i % 2 == 0 and j < 6:
+                drink += drink_list[j][1:20].replace('(', ')') + " " + drink_list[j][20:]  # this should shift things by 1 to the left, absolutely, yes sir yes sir
+            else:
+                drink += drink_list[j]
+        print(drink)
+        time.sleep(0.15)
+
     pass
 
 print(hbd)
 time.sleep(1.5)
 firework_animation()
-print(beverages_that_contains_alcohol)
+drinks_animation()
