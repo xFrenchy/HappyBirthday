@@ -10,6 +10,16 @@ hbd = """
  █▄█ █ █ ▀█ █  █  █ █▄▀ █▀█  █  ▄
  """
 
+evil_msg = """
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000403150 in std::_Rb_tree<std::pair<long long, happy>, std::pair<std::birthday<long long,
+long long> to, long long>, std::Select1st<std::pair<std::pair<you, :)> const, long long
+> >, std::less<std::pair<long long, long long> >, std::allocator<std::pair<std::pair<long long, long
+long> const, long long> > >::_S_key (
+    __x=<error reading variable: Cannot access memory at address 0x7fffff7feff8>) at /usr/include/c++/
+6/bits/stl_tree.h:688
+"""
+
 def screen_clear():
     if os.name == "posix":
         _ = os.system('clear')
@@ -98,3 +108,10 @@ time.sleep(1.5)
 screen_clear()
 firework_animation()
 drinks_animation()
+screen_clear()
+print("Wow wasn't that neat? Well just wait for the next animation! Which is coming up like right now...")
+time.sleep(3)
+print(evil_msg)
+time.sleep(3)
+screen_clear()
+print("Just kidding :) happy birthday")
