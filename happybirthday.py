@@ -1,3 +1,4 @@
+import os
 import time
 
 hbd = """
@@ -8,6 +9,12 @@ hbd = """
  ███ █ █▄█  █  ████ █ █ █▄█  █  █
  █▄█ █ █ ▀█ █  █  █ █▄▀ █▀█  █  ▄
  """
+
+def screen_clear():
+    if os.name == "posix":
+        _ = os.system('clear')
+    else:
+        _ = os.system('cls')
 
 def firework_animation():
     # Listen, just, listen okay. 
@@ -46,6 +53,7 @@ def firework_animation():
                 firework += firework_list[j]
         print(firework)
         time.sleep(0.15)
+        screen_clear()
             
 def drinks_animation():
     drink0 = "      (     (           o\n"
@@ -81,10 +89,12 @@ def drinks_animation():
                 drink += drink_list[j]
         print(drink)
         time.sleep(0.15)
+        screen_clear()
 
     pass
 
 print(hbd)
 time.sleep(1.5)
+screen_clear()
 firework_animation()
 drinks_animation()
